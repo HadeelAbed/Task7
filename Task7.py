@@ -4,10 +4,10 @@ def number_pattern(num):
         for j in range(1,i+1):
             print(j,end='',)
         print()
-num_of_row=input('Enter num of rows : ')
-number_pattern(int(num_of_row))
-#*********
-
+# num_of_row=input('Enter num of rows : ')
+# number_pattern(int(num_of_row))
+# #*********
+#
 #2
 def sum_num(num1):
     sum=0
@@ -35,15 +35,15 @@ print_name(name)
 #*********
 
 ##4
-word=input('Enter a word to reverse  : ')
-def word_reverse(word):
-    for i in range(len(word)-1,-1,-1):
-        print(word[i],end='')
-
-word_reverse(word)
+def main():
+    user_input = input("Enter a word: ")
+    reversed_word = user_input[::-1]
+    print("Reversed word:", reversed_word)
+main()
 print()
-#*********
 
+# #*********
+#
 ##5
 range_num=int(input('Enter range : '))
 def print_range(range_of_num):
@@ -56,24 +56,25 @@ print()
 #*********
 
 #6
-def  multiples_of_5():
-    for i in range(1,11):
-        print(i*5,' ',end='')
-print('the first 10 multiples of 5 ')
-multiples_of_5()
+def main():
+    for i in range(1, 11):
+        print(i * 5, end=" ")
+main()
 print()
-#*********
 
+# #*********
 #7
-Limit_number=int(input('Enter the Limit number: '))
-Max_display_on_screen=int(input('Enter the maximum outputs to display(Max_display_on_screen) : '))
-Target_number=int(input('Enter the Target number :'))
-def num_display(Limit,Max,Target):#300,8,4
-    num = 1
-    for i in range(Target,Limit+1):
-        if(num<=Max):
-            print(num*Target,' ',end='')
-            num+=1
-        else:
-            break
-num_display(Limit_number,Max_display_on_screen,Target_number)
+def main():
+    Limit_number = int(input("Enter the limit number: "))
+    Max_display_on_screen = int(input("Enter the max display count: "))
+    Target_number = int(input("Enter the target number: "))
+
+    count = 0
+    current_number = Target_number
+
+    while current_number <= Limit_number and count < Max_display_on_screen:
+        print(current_number, end=" ")
+        count += 1
+        current_number += Target_number
+main()
+print()
